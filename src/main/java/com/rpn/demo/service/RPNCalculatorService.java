@@ -126,7 +126,7 @@ public class RPNCalculatorService {
 			stack.clear();
 			break;
 		default:
-			if (input.matches("-?[0-9]+.*[0-9]*")) {
+			if (input.matches("-?[0-9]+.*[0-9]*") && !"Infinity".equals(new Double(input.trim()).toString())) {
 				backupStack(stack, copyList);
 				stack.push(new Double(input.trim()));
 			}
