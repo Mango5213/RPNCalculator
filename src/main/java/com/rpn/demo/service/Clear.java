@@ -2,6 +2,7 @@ package com.rpn.demo.service;
 
 import org.springframework.stereotype.Service;
 
+import com.rpn.demo.constant.RPNConstants;
 import com.rpn.demo.support.StackContextHolder;
 
 @Service
@@ -16,7 +17,7 @@ public class Clear implements Operation {
 
 	@Override
 	public String getOperator() {
-		return "clear";
+		return RPNConstants.Operators.CLEAR;
 	}
 
 }
